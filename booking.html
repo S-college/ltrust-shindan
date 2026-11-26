@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>ご予約｜美容カイロのお店 Ltrust</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
+<style>
+:root{--paper:#FBF7F3;--card:#FFFFFF;--ink:#2E2523;--ink-soft:#5A4C47;--line:#DFD0C2;--rose:#B0706C;--rose-deep:#8C4F4C;--rose-pale:#F6E7E4;--brass:#A9884F;--green:#06C755;
+--serif:"Shippori Mincho B1","Noto Serif JP","Yu Mincho",serif;--gothic:"Zen Kaku Gothic New","Yu Gothic","Hiragino Sans",sans-serif}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--gothic);-webkit-text-size-adjust:100%}
+.wrap{max-width:560px;margin:0 auto;padding:20px 16px 64px}
+header{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px}
+header .brand{font-family:var(--serif);font-weight:700;font-size:18px;color:var(--rose-deep)}
+header .brand small{display:block;font-family:var(--gothic);font-weight:500;font-size:11px;color:var(--ink-soft);letter-spacing:.08em}
+.steps{display:flex;gap:4px;margin:12px 0 18px}
+.steps i{flex:1;height:4px;border-radius:2px;background:var(--line)}
+.steps i.on{background:var(--rose-deep)}
+h1{font-family:var(--serif);font-size:23px;line-height:1.4;margin:6px 0 4px}
+.lead{color:var(--ink-soft);font-size:14px;line-height:1.7;margin:0 0 16px}
+.opt{display:block;width:100%;text-align:left;background:var(--card);border:1.5px solid var(--line);border-radius:12px;padding:14px 16px;margin:0 0 10px;font:inherit;color:inherit;cursor:pointer}
+.opt:hover{border-color:var(--rose)}
+.opt.sel{border-color:var(--rose-deep);background:var(--rose-pale)}
+.opt b{display:block;font-size:16px}
+.opt span{display:block;font-size:13px;color:var(--ink-soft);margin-top:3px;line-height:1.5}
+.opt .price{color:var(--rose-deep);font-weight:700}
+.opt s{color:var(--ink-soft);font-weight:400;margin-right:4px}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.dates{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:12px}
+.date{border:1.5px solid var(--line);background:var(--card);border-radius:10px;padding:8px 4px;text-align:center;font:inherit;color:inherit;cursor:pointer;line-height:1.3}
+.date small{display:block;font-size:11px;color:var(--ink-soft)}
+.date em{display:block;font-style:normal;font-size:11px;color:var(--rose-deep);font-weight:700}
+.date[disabled]{opacity:.38;cursor:default}
+.date.sel{border-color:var(--rose-deep);background:var(--rose-pale)}
+.times{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:6px 0 16px}
+.time{border:1.5px solid var(--line);background:var(--card);border-radius:10px;padding:10px 0;font:inherit;font-weight:700;color:inherit;cursor:pointer}
+.time.sel{border-color:var(--rose-deep);background:var(--rose-deep);color:#fff}
+.nav{display:flex;justify-content:space-between;align-items:center;margin:4px 0 12px;font-size:14px}
+.link{background:none;border:0;color:var(--rose-deep);font:inherit;font-weight:700;cursor:pointer;padding:6px 0}
+.link[disabled]{color:var(--line);cursor:default}
+label.f{display:block;font-size:14px;font-weight:700;margin:14px 0 6px}
+label.f em{font-style:normal;font-size:11px;color:#fff;background:var(--rose-deep);border-radius:3px;padding:1px 6px;margin-left:6px;vertical-align:2px}
+label.f i{font-style:normal;font-weight:400;font-size:12px;color:var(--ink-soft);margin-left:6px}
+input[type=text],input[type=tel],textarea{width:100%;border:1.5px solid var(--line);border-radius:10px;padding:12px;font:inherit;font-size:16px;background:var(--card);color:var(--ink)}
+input:focus,textarea:focus{outline:none;border-color:var(--rose-deep)}
+textarea{min-height:84px;resize:vertical}
+.check{display:flex;gap:10px;align-items:flex-start;font-size:13px;line-height:1.6;margin:16px 0 4px}
+.check input{width:20px;height:20px;margin-top:2px;accent-color:var(--rose-deep)}
+.privacy{font-size:12px;color:var(--ink-soft);line-height:1.7;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px 12px;margin-top:8px}
+.btn{display:block;width:100%;border:0;border-radius:999px;padding:16px;font:inherit;font-size:17px;font-weight:700;background:var(--rose-deep);color:#fff;cursor:pointer;margin-top:18px}
+.btn[disabled]{opacity:.45;cursor:default}
+.btn.green{background:var(--green)}
+.btn.sub{background:none;color:var(--rose-deep);border:1.5px solid var(--rose-deep)}
+.sum{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:6px 16px}
+.sum div{display:flex;gap:12px;padding:10px 0;border-bottom:1px solid var(--line);font-size:15px;line-height:1.5}
+.sum div:last-child{border-bottom:0}
+.sum dt{flex:0 0 6em;color:var(--ink-soft);font-size:13px;padding-top:2px}
+.sum dd{margin:0;font-weight:500}
+.code{font-family:var(--serif);font-size:30px;font-weight:700;color:var(--rose-deep);letter-spacing:.06em;text-align:center;margin:6px 0 2px}
+.note{font-size:13px;color:var(--ink-soft);line-height:1.7}
+.alert{background:#FBEBEB;border:1px solid #E7B6AF;color:#7A2E2A;border-radius:10px;padding:12px;font-size:14px;line-height:1.6;margin:8px 0}
+.loading{display:flex;align-items:center;gap:10px;color:var(--ink-soft);font-size:14px;padding:18px 0}
+.loading::before{content:"";width:18px;height:18px;border:2px solid var(--line);border-top-color:var(--rose-deep);border-radius:50%;animation:spin 1s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.gift{background:var(--rose-pale);border-radius:12px;padding:12px 14px;font-size:13px;line-height:1.6;margin:0 0 16px}
+.gift b{color:var(--rose-deep)}
+footer{margin-top:28px;font-size:12px;color:var(--ink-soft);line-height:1.7}
+.hp{position:absolute;left:-9999px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header><div class="brand">Ltrust<small>美容カイロのお店</small></div><div class="note" id="storeBadge"></div></header>
+  <div class="steps" id="steps"></div>
+  <main id="app" aria-live="polite"><div class="loading">読み込んでいます…</div></main>
+  <footer>※ 当店の施術は医療行為ではなく、病気の診断・治療を行うものではありません。<br>ご予約の変更・キャンセルは、LINEのトークでお知らせください。</footer>
+</div>
+<script>
+const API = "https://script.google.com/macros/s/AKfycby3M4ox01J9ua9ffe8MPOcuB3S5kJB5EzIjjnZWJVoRrcs_XVX4nwsmE70FFRTNBntpVw/exec";
+const LINE_ID = "@ufu3935c";
+const CIRC = "①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭";
+const STORE_DAYS = { fukui: "火・水・木", harue: "月・金・土・日" };
+const WDJ = ["日","月","火","水","木","金","土"];
+const q = new URLSearchParams(location.search);
+const st = {
+  step: 0, cfg: null,
+  store: ["fukui","harue"].includes(q.get("store")) ? q.get("store") : "",
+  visit: q.get("visit") === "repeat" ? "repeat" : (q.get("visit") === "first" ? "first" : ""),
+  menu: Number(q.get("menu")) || 0,
+  from: null, avail: null, date: "", time: "",
+  name: "", kana: "", tel: "", referrer: "", note: "", agree: false, src: q.get("src") || "line",
+  result: null, error: ""
+};
+const $ = s => document.querySelector(s);
+const esc = s => String(s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const yen = n => Number(n).toLocaleString("ja-JP") + "円";
+const ymd = d => d.getFullYear() + "-" + String(d.getMonth()+1).padStart(2,"0") + "-" + String(d.getDate()).padStart(2,"0");
+const jp = ds => { const d = new Date(ds + "T12:00:00+09:00"); return (d.getMonth()+1) + "月" + d.getDate() + "日（" + WDJ[d.getDay()] + "）"; };
+const menuOf = n => st.cfg.menus.find(m => m.no === n);
+const priceOf = m => st.visit === "repeat" ? (m.regular || m.first) : (m.first || m.regular);
+
+async function get(params) {
+  const r = await fetch(API + "?" + new URLSearchParams(params));
+  return r.json();
+}
+async function post(body) {
+  const r = await fetch(API, { method: "POST", body: JSON.stringify(body) });
+  return r.json();
+}
+
+const STEPS = ["店舗", "メニュー", "日時", "お客様情報", "確認"];
+function render() {
+  $("#steps").innerHTML = STEPS.map((_, i) => '<i class="' + (i <= st.step ? "on" : "") + '"></i>').join("");
+  $("#storeBadge").textContent = st.store ? ({fukui:"福井店",harue:"春江店"})[st.store] : "";
+  const v = [viewStore, viewMenu, viewDate, viewForm, viewConfirm, viewDone][st.step]();
+  $("#app").innerHTML = v;
+  bind();
+  window.scrollTo({ top: 0 });
+}
+function go(n) { st.step = n; st.error = ""; render(); }
+
+function viewStore() {
+  return '<h1>ご予約</h1><p class="lead">店舗と、はじめてかどうかを選んでください。</p>' +
+    '<div class="gift">LINEからはじめてご予約の方に、<b>小顔調整（3,000円相当）</b>をプレゼントしています。</div>' +
+    ["fukui","harue"].map(s => '<button class="opt ' + (st.store===s?"sel":"") + '" data-store="' + s + '"><b>' + ({fukui:"福井店",harue:"春江店"})[s] + '</b><span>髙間がいる日：' + STORE_DAYS[s] + '</span></button>').join("") +
+    '<div class="row2">' +
+    [["first","はじめて"],["repeat","2回目以降"]].map(([k,l]) => '<button class="opt ' + (st.visit===k?"sel":"") + '" data-visit="' + k + '"><b>' + l + '</b><span>' + (k==="first"?"初回の価格で表示":"通常の価格で表示") + '</span></button>').join("") +
+    '</div><button class="btn" id="next" ' + (st.store && st.visit ? "" : "disabled") + '>メニューを選ぶ</button>';
+}
+function viewMenu() {
+  return '<h1>メニューを選ぶ</h1><p class="lead">迷ったら「① 全身姿勢・骨盤調整」がおすすめです。</p>' +
+    st.cfg.menus.map(m => {
+      const p = priceOf(m), other = st.visit === "repeat" ? 0 : (m.regular > p ? m.regular : 0);
+      return '<button class="opt ' + (st.menu===m.no?"sel":"") + '" data-menu="' + m.no + '"><b>' + CIRC[m.no-1] + ' ' + esc(m.name) + '</b><span>' + m.min + '分　' +
+        (other ? '<s>' + yen(other) + '</s>' : '') + '<span class="price" style="display:inline">' + yen(p) + '</span>' + (m.note ? '　※' + esc(m.note) : '') + '</span></button>';
+    }).join("") +
+    '<button class="btn sub" id="back">戻る</button>';
+}
+function viewDate() {
+  let h = '<h1>日時を選ぶ</h1><p class="lead">' + CIRC[st.menu-1] + ' ' + esc(menuOf(st.menu).name) + '（' + menuOf(st.menu).min + '分）／' + ({fukui:"福井店",harue:"春江店"})[st.store] + '</p>';
+  if (st.error) h += '<div class="alert">' + esc(st.error) + '</div>';
+  if (!st.avail) return h + '<div class="loading">空き状況を確認しています…</div>';
+  const days = Object.keys(st.avail);
+  const today = ymd(new Date());
+  h += '<div class="nav"><button class="link" id="prev" ' + (st.from <= today ? "disabled" : "") + '>← 前の2週間</button><button class="link" id="more">次の2週間 →</button></div>';
+  h += '<div class="dates">' + days.map(ds => {
+    const n = st.avail[ds].length, d = new Date(ds + "T12:00:00+09:00");
+    return '<button class="date ' + (st.date===ds?"sel":"") + '" data-date="' + ds + '" ' + (n ? "" : "disabled") + '><small>' + (d.getMonth()+1) + '/' + d.getDate() + '</small>' + WDJ[d.getDay()] + '<em>' + (n ? "空きあり" : "－") + '</em></button>';
+  }).join("") + '</div>';
+  if (!days.some(ds => st.avail[ds].length)) h += '<p class="note">この2週間は空きがありません。「次の2週間」をご覧ください。</p>';
+  if (st.date) {
+    h += '<p class="note" style="margin:4px 0 0"><b>' + jp(st.date) + '</b> の空き時間</p><div class="times">' +
+      st.avail[st.date].map(t => '<button class="time ' + (st.time===t?"sel":"") + '" data-time="' + t + '">' + t + '</button>').join("") + '</div>';
+  }
+  return h + '<button class="btn" id="next" ' + (st.date && st.time ? "" : "disabled") + '>この日時で進む</button><button class="btn sub" id="back">戻る</button>';
+}
+function viewForm() {
+  return '<h1>お客様情報</h1><p class="lead">ご予約の確認やご連絡に使います。</p>' +
+    '<label class="f" for="name">お名前<em>必須</em></label><input type="text" id="name" autocomplete="name" value="' + esc(st.name) + '" placeholder="例）山田 花子">' +
+    '<label class="f" for="kana">ふりがな</label><input type="text" id="kana" value="' + esc(st.kana) + '" placeholder="例）やまだ はなこ">' +
+    '<label class="f" for="tel">電話番号<em>必須</em></label><input type="tel" id="tel" autocomplete="tel" inputmode="tel" value="' + esc(st.tel) + '" placeholder="例）090-1234-5678">' +
+    '<label class="f" for="referrer">紹介者のお名前<i>ご紹介の方のみ</i></label><input type="text" id="referrer" value="' + esc(st.referrer) + '">' +
+    '<label class="f" for="note">ご要望・気になるところ<i>妊娠週数、痛みのある場所など</i></label><textarea id="note">' + esc(st.note) + '</textarea>' +
+    '<input class="hp" type="text" id="website" tabindex="-1" autocomplete="off" aria-hidden="true">' +
+    '<div class="privacy">ご入力いただいた情報は、ご予約の管理とご連絡のためにだけ使い、ほかの目的や第三者への提供には使いません。</div>' +
+    '<label class="check"><input type="checkbox" id="agree" ' + (st.agree ? "checked" : "") + '><span>上の内容に同意します</span></label>' +
+    '<button class="btn" id="next">確認へ進む</button><button class="btn sub" id="back">戻る</button>';
+}
+function viewConfirm() {
+  const m = menuOf(st.menu);
+  return '<h1>ご予約内容の確認</h1>' + (st.error ? '<div class="alert">' + esc(st.error) + '</div>' : '') +
+    '<dl class="sum">' + [
+      ["店舗", ({fukui:"福井店",harue:"春江店"})[st.store]], ["日時", jp(st.date) + " " + st.time + "〜"],
+      ["メニュー", CIRC[m.no-1] + " " + m.name + "（" + m.min + "分）"], ["料金", (st.visit==="first"?"初回 ":"") + yen(priceOf(m))],
+      ["お名前", st.name + (st.kana ? "（" + st.kana + "）" : "") + " 様"], ["電話番号", st.tel],
+      ...(st.referrer ? [["紹介者", st.referrer]] : []), ...(st.note ? [["ご要望", st.note]] : [])
+    ].map(([k, v]) => '<div><dt>' + k + '</dt><dd>' + esc(v) + '</dd></div>').join("") + '</dl>' +
+    '<button class="btn" id="book">この内容で予約する</button><button class="btn sub" id="back">戻る</button>';
+}
+function viewDone() {
+  const r = st.result;
+  const msg = encodeURIComponent("予約確認 " + r.code);
+  return '<h1>ご予約を受け付けました</h1><p class="note" style="text-align:center;margin:10px 0 0">予約番号</p><div class="code">' + esc(r.code) + '</div>' +
+    '<dl class="sum" style="margin-top:12px">' + [["店舗", r.store], ["日時", r.date + " " + r.time], ["メニュー", r.menu], ["料金", (r.visit==="初回"?"初回 ":"") + r.price]]
+      .map(([k, v]) => '<div><dt>' + k + '</dt><dd>' + esc(v) + '</dd></div>').join("") + '</dl>' +
+    '<a class="btn green" style="text-align:center;text-decoration:none" href="https://line.me/R/oaMessage/' + encodeURIComponent(LINE_ID) + '/?' + msg + '">LINEで予約確認を受け取る</a>' +
+    '<p class="note" style="margin-top:10px">ボタンを押すと、LINEに「予約確認 ' + esc(r.code) + '」と入った状態で開きます。そのまま送信すると、予約内容が届き、前日にお知らせが届くようになります。</p>';
+}
+
+function bind() {
+  document.querySelectorAll("[data-store]").forEach(b => b.onclick = () => { st.store = b.dataset.store; st.avail = null; st.date = st.time = ""; render(); });
+  document.querySelectorAll("[data-visit]").forEach(b => b.onclick = () => { st.visit = b.dataset.visit; render(); });
+  document.querySelectorAll("[data-menu]").forEach(b => b.onclick = () => { st.menu = Number(b.dataset.menu); st.avail = null; st.date = st.time = ""; go(2); loadAvail(); });
+  document.querySelectorAll("[data-date]").forEach(b => b.onclick = () => { st.date = b.dataset.date; st.time = ""; render(); });
+  document.querySelectorAll("[data-time]").forEach(b => b.onclick = () => { st.time = b.dataset.time; render(); });
+  const back = $("#back"); if (back) back.onclick = () => go(st.step - 1);
+  const more = $("#more"); if (more) more.onclick = () => { st.from = shift(st.from, 14); st.date = st.time = ""; loadAvail(); };
+  const prev = $("#prev"); if (prev) prev.onclick = () => { st.from = shift(st.from, -14); st.date = st.time = ""; loadAvail(); };
+  const next = $("#next");
+  if (next) next.onclick = () => {
+    if (st.step === 0) go(st.menu && menuOf(st.menu) ? 2 : 1), st.step === 2 && !st.avail && loadAvail();
+    else if (st.step === 2) go(3);
+    else if (st.step === 3) {
+      ["name","kana","tel","referrer","note"].forEach(k => st[k] = $("#" + k).value.trim());
+      st.agree = $("#agree").checked;
+      const digits = st.tel.replace(/[^\d]/g, "");
+      if (!st.name) return alertMsg("お名前を入力してください");
+      if (digits.length < 10) return alertMsg("電話番号を入力してください");
+      if (!st.agree) return alertMsg("個人情報の取り扱いへの同意をお願いします");
+      go(4);
+    }
+  };
+  const book = $("#book");
+  if (book) book.onclick = async () => {
+    book.disabled = true; book.textContent = "送信しています…";
+    try {
+      const r = await post({ action: "book", store: st.store, menu: st.menu, date: st.date, time: st.time, visit: st.visit,
+        name: st.name, kana: st.kana, tel: st.tel, referrer: st.referrer, note: st.note, src: st.src, website: ($("#website")||{}).value || "" });
+      if (r.ok) { st.result = r; go(5); }
+      else if (r.error === "taken") { st.time = ""; st.avail = null; st.step = 2; st.error = "申し訳ありません。選んだ時間がちょうど埋まりました。別の時間をお選びください。"; render(); loadAvail(); }
+      else { st.error = r.error || "送信できませんでした。時間をおいてお試しください。"; render(); }
+    } catch (e) { st.error = "通信に失敗しました。電波の良いところで、もう一度お試しください。"; render(); }
+  };
+}
+function alertMsg(s) {
+  let a = document.querySelector(".alert");
+  if (!a) { a = document.createElement("div"); a.className = "alert"; $("#app").insertBefore(a, $("#app").children[2]); }
+  a.textContent = s; a.scrollIntoView({ behavior: "smooth", block: "center" });
+}
+function shift(ds, n) { const d = new Date(ds + "T12:00:00+09:00"); d.setDate(d.getDate() + n); return ymd(d); }
+
+async function loadAvail() {
+  st.avail = null; render();
+  if (!st.from) st.from = ymd(new Date());
+  try {
+    const r = await get({ action: "avail", store: st.store, menu: st.menu, from: st.from, days: 14 });
+    if (!r.ok) throw new Error(r.error);
+    st.avail = r.dates;
+  } catch (e) { st.avail = {}; st.error = "空き状況を読み込めませんでした。時間をおいてお試しください。"; }
+  render();
+}
+
+(async () => {
+  try {
+    const r = await get({ action: "config" });
+    if (!r.ok) throw new Error(r.error);
+    st.cfg = r;
+    if (st.menu && !menuOf(st.menu)) st.menu = 0;
+    render();
+  } catch (e) {
+    $("#app").innerHTML = '<div class="alert">ただいま予約画面を読み込めません。お手数ですが、LINEのトークでご予約をお知らせください。</div>';
+  }
+})();
+</script>
+</body>
+</html>
